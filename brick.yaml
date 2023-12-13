@@ -10,4 +10,4 @@ vars:
     type: string
     description: Project name
     default: MyProject
-    promt: Whats the name of your project?
+    prompt: Whats the name of your project?
