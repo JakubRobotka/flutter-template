@@ -5,7 +5,7 @@ version: 0.0.1
 environment:
   mason: ">=0.1.0-dev <0.1.0"
 
-vers:
+vars:
   name:
     type: string
     description: Project name
