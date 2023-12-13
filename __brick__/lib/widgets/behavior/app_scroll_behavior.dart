@@ -1,6 +1,5 @@
 import 'package:{{ projectName }}/common/services/platform_service.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 
 class AppScrollBehavior extends ScrollBehavior {
   @override
