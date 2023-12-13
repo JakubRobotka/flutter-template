@@ -22,7 +22,7 @@ vars:
     default: ""
     prompt: Whats your project description?
   appId:
-    type: String
+    type: string
     description: Project app id for iOS and Android
     default: com.example.project
     prompt: Whats your project app id?
