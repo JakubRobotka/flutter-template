@@ -1,0 +1,13 @@
+name: flutter_template
+description: Bootstrap flutter template.
+version: 0.0.1
+
+environment:
+  mason: ">=0.1.0-dev <0.1.0"
+
+vers:
+  name:
+    type: string
+    description: Project name
+    default: MyProject
+    promt: Whats the name of your project?
