@@ -30,8 +30,8 @@ firebase_init: # init firebase
 	firebase login
 	firebase project:create {{ projectName }} -n "{{ projectLabel }}" -o
 	firebase use {{ projectName }}
-	@make firebase_create_apps
-    @make firebase_appdistribution
+	@make create_apps
+	@make firebase_appdistribution
 
 create_apps: # create firebase apps
 	firebase apps:create iOS "{{ projectLabel }} DEV" -b cz.digital.{{appId}}.dev
