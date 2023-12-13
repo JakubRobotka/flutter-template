@@ -10,7 +10,7 @@ vars:
     type: string
     description: Project name
     default: ProjectName
-    prompt: Whats the name of your project?
+    prompt: Whats the name of your project? (only _ supported)
   projectLabel:
     type: string
     description: Project label
@@ -24,5 +24,4 @@ vars:
   appId:
     type: string
     description: Project app id for iOS and Android
-    default: com.example.project
-    prompt: Whats your project app id?
+    prompt: Whats your project app id? (between cz.digital.{appId})

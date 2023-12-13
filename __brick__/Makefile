@@ -9,6 +9,13 @@ default: # run help command
 
 help: # show help
 	@echo -e "Available commands:"
+	@echo -e "${COLOUR_GREEN}make help${COLOUR_END}                - List of all commands"
+	@echo -e "${COLOUR_GREEN}make update${COLOUR_END}              - Update dependencies"
+	@echo -e "${COLOUR_GREEN}-----------------------------------------------------------${COLOUR_END}"
+	@echo -e "${COLOUR_GREEN}make firebase_init${COLOUR_END}      - Init firebase project"
+	@echo -e "${COLOUR_GREEN}make create_apps${COLOUR_END}        - Create firebase apps"
+	@echo -e "${COLOUR_GREEN}make firebase_appdistribution${COLOUR_END} - Create firebase app distribution groups"
+
 
 update: # update dependencies
 	flutter pub get
@@ -35,7 +42,7 @@ create_apps: # create firebase apps
 	firebase apps:create Android "{{ projectLabel }} TEST" -a cz.digital.{{appId}}.internal
 	firebase apps:create Android "{{ projectLabel }} STAGE" -a cz.digital.{{appId}}.stage
 
-firebase_appdistribution
+firebase_appdistribution:
 	firebase appdistribution:group:create "Android" digital-android
 	firebase appdistribution:group:create "iOS" digital-ios
 
