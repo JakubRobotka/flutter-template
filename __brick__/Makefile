@@ -28,7 +28,7 @@ update: # update dependencies
 
 firebase_init: # init firebase
 	firebase login
-	firebase project:create {{ projectName }} -n "{{ projectLabel }}" -o
+	firebase project:create -n "{{ projectLabel }}" {{ projectName }}
 	firebase use {{ projectName }}
 	@make create_apps
 	@make firebase_appdistribution
