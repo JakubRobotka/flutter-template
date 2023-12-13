@@ -6,8 +6,13 @@ environment:
   mason: ">=0.1.0-dev <0.1.0"
 
 vars:
-  name:
+  projectName:
     type: string
     description: Project name
-    default: MyProject
+    default: ProjectName
     prompt: Whats the name of your project?
+  description:
+    type: string
+    description: Project description
+    default: ""
+    prompt: Whats your project description?
