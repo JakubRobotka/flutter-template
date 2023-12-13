@@ -1,6 +1,10 @@
 import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
+import 'package:{{ projectName }}/common/constants/remote_config_constants.dart';
+import 'package:{{ projectName }}/common/router/router.dart';
+import 'package:{{ projectName }}/common_libs.dart';
+import 'package:{{ projectName }}/injector.dart';
 
 Future<void> bootstrap(Widget Function() builder) async {
   await initInjector();
