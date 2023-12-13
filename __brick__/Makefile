@@ -1,4 +1,4 @@
-.PHONY: default help update test integration_test
+.PHONY: default help update fireabase_init create_apps firebase_appdistribution
 SHELL:=/bin/bash
 
 COLOUR_GREEN=\033[0;32m

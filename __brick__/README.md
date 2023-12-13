@@ -1,4 +1,4 @@
-# {{name}}
+# {{projectLabel}}
 
 Mobile app
 
