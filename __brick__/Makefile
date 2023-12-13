@@ -13,3 +13,31 @@ help: # show help
 update: # update dependencies
 	flutter pub get
 	dart run build_runner build --delete-conflicting-outputs
+
+
+### -------------------------------------
+###  FIREBASE
+### -------------------------------------
+
+firebase_init: # init firebase
+	firebase login
+	firebase project:create {{ projectName }} -n "{{ projectLabel }}" -o
+	firebase use {{ projectName }}
+	@make firebase_create_apps
+    @make firebase_appdistribution
+
+create_apps: # create firebase apps
+	firebase apps:create iOS "{{ projectLabel }} DEV" -b cz.digital.{{appId}}.dev
+	firebase apps:create iOS "{{ projectLabel }} TEST" -b cz.digital.{{appId}}.internal
+	firebase apps:create iOS "{{ projectLabel }} STAGE" -b cz.digital.{{appId}}.stage
+
+	firebase apps:create Android "{{ projectLabel }} DEV" -a cz.digital.{{appId}}.dev
+	firebase apps:create Android "{{ projectLabel }} TEST" -a cz.digital.{{appId}}.internal
+	firebase apps:create Android "{{ projectLabel }} STAGE" -a cz.digital.{{appId}}.stage
+
+firebase_appdistribution
+	firebase appdistribution:group:create "Android" digital-android
+	firebase appdistribution:group:create "iOS" digital-ios
+
+	firebase appdistribution:testers:add --group-alias=digital-android jakub.robotka@digital.cz jan.kollert@digital.cz dsmobile.0009@gmail.com dsmobile.0010@gmail.com dsmobile.0100@gmail.com jitka.bolechova@digital.cz
+	firebase appdistribution:testers:add --group-alias=digital-ios jakub.robotka@gmail.com jakub.robotka@digital.cz dsmobile.0007@gmail.com jitka.bolechova@digital.cz michal.rehak@digital.cz

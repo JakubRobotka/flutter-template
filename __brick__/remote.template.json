@@ -1,0 +1,30 @@
+{
+  "parameters": {
+    "maintenance": {
+      "defaultValue": {
+        "value": "false"
+      },
+      "description": "Umožní v aplikaci přejít do stavu údržby a v aplikaci zobrazí maintenance stránku.",
+      "valueType": "BOOLEAN"
+    },
+    "min_version": {
+      "defaultValue": {
+        "value": "0.0.0"
+      },
+      "description": "Minimální podporovaná verze aplikace",
+      "valueType": "STRING"
+    }
+  },
+  "version": {
+    "versionNumber": "2",
+    "updateTime": "2023-12-13T13:01:44.237276Z",
+    "updateUser": {
+      "email": "jakub.robotka@digital.cz"
+    },
+    "updateOrigin": "CONSOLE",
+    "updateType": "INCREMENTAL_UPDATE"
+  },
+  "parameterGroups": {
+    "FEATURE_FLAGS": {}
+  }
+}

@@ -11,8 +11,18 @@ vars:
     description: Project name
     default: ProjectName
     prompt: Whats the name of your project?
+  projectLabel:
+    type: string
+    description: Project label
+    default: ProjectLabel
+    prompt: Whats the label of your project?
   description:
     type: string
     description: Project description
     default: ""
     prompt: Whats your project description?
+  appId:
+    type: String
+    description: Project app id for iOS and Android
+    default: com.example.project
+    prompt: Whats your project app id?

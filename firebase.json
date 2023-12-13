@@ -1,0 +1,19 @@
+{
+  "remoteconfig": {
+    "parameters": {
+      "welcome_message": {
+        "defaultValue": {
+          "value": "Welcome"
+        },
+        "conditionalValues": {
+          "android": {
+            "value": "Welcome Android"
+          },
+          "ios": {
+            "value": "Welcome iOS"
+          }
+        }
+      }
+    }
+  }
+}
